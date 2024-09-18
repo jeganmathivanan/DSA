@@ -1,0 +1,82 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        
+        int[] arr = {9,5,2,7,8,1,0,-1,-5,-2,-3,-100, -23,-10, -45, -55};
+        
+        //bubbleSort(arr);
+        
+        reveserbubbleSorting(arr);
+        for (int num : arr) {
+            System.out.print(num + " "); // Print each element followed by a space
+        }
+        
+        // int target = 8;
+        // int result = binarySearch(arr, target);
+        
+       
+        // System.out.print("  binary search    ");
+        // System.out.print(result);
+        
+        
+        // System.out.println(arr.toString() + "result");
+    }
+    
+    
+    public static void reveserbubbleSorting(int[] arr){
+        int num = arr.length - 1;
+        
+        for (int i = 0 ; i < num; i++){
+            for(int j = 0 ; j < num - i ; j++){
+                if(arr[j] < arr[j+1]){
+                    int temp = arr[j + 1];
+                    arr[j+ 1] = arr[j];
+                    arr[j] = temp;
+                    
+                }
+            }
+        }
+    }
+    
+   public static int binarySearch(int[] arr , int target){
+       
+       int low = 0;
+       int high = arr.length - 1;
+       
+       while(low <= high){
+           
+           int mid = low + (high - low)/2;
+           
+           if(arr[mid] == target){
+               return mid;
+           }
+           
+           if(arr[mid] < target){
+               low = mid + 1;
+           }else{
+               high = mid -1;
+           }
+       }
+       
+       return -1;
+   }
+    
+    
+    public static void bubbleSort(int[] arr){
+       int num = arr.length -1;
+       for(int i = 0 ; i < num; i++){
+           for (int j = 0 ; j < num - i ; j++){
+               if(arr[j+1] < arr[j]){
+                   int temp = arr[j +1];
+                   arr[ j + 1] = arr[j];
+                   arr[j] = temp;
+               }
+           }
+       }
+    }
+    
+    
+}
