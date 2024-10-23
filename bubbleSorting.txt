@@ -1,33 +1,5 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
+As part of our security protocol, the SFDB team will only whitelist the production IP. For now, you can continue using the API we provided earlier.
 
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Try programiz.pro");
-        
-        int[] arr = {9,5,2,7,8,1,0,-1,-5,-2,-3,-100, -23,-10, -45, -55};
-        
-        bubbleSort(arr);
-        for (int num : arr) {
-            System.out.print(num + " "); // Print each element followed by a space
-        }
-        
-        // System.out.println(arr.toString() + "result");
-    }
-    
-    
-    public static void bubbleSort(int[] arr){
-       int num = arr.length -1;
-       for(int i = 0 ; i < num; i++){
-           for (int j = 0 ; j < num - i ; j++){
-               if(arr[j+1] < arr[j]){
-                   int temp = arr[j +1];
-                   arr[ j + 1] = arr[j];
-                   arr[j] = temp;
-               }
-           }
-       }
-    }
-    
-    
-}
+The whitelisting process is currently underway, and once it is completed, we will provide a temporary API.
+
+In the previous communication, it was not clearly specified which IP corresponds to staging and which to production. Please mention that in your response to avoid any confusion.
